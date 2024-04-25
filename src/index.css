@@ -1,0 +1,21 @@
+:root {
+  --color-background: #242424;
+  --font-color: #ffffff;
+  --font-small: 0.8rem;
+  --font-large: 1.4rem;
+}
+
+html {
+  font-family: system-ui;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.7;
+  background-color: var(--color-background);
+  color: var(--font-color);
+}
+
+#root {
+  margin: 1rem;
+}

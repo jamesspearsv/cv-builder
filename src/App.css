@@ -1,0 +1,32 @@
+main {
+  width: 100%;
+  display: flex;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.2rem;
+}
+
+.form-group-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form-group input {
+  padding: 0.3rem;
+}
+
+.form-group > label {
+  font-size: var(--font-small);
+}
