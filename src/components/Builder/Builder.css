@@ -1,0 +1,12 @@
+#builder {
+  padding: 1rem;
+}
+
+#link-back {
+  text-align: center;
+}
+
+#link-back > a {
+  color: white;
+  margin-left: 5px;
+}

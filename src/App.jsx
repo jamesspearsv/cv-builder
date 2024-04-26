@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import { data } from './state';
+import { data } from './js/data';
 import './App.css';
-import { Personal } from './components/Personal/Personal';
-import { Display } from './components/Display/Display';
-import { Education } from './components/Education/Education';
+import { Preview } from './components/Preview/Preview';
+import { Builder } from './components/Builder/Builder';
 
 function App() {
   const [info, setInfo] = useState(data);
@@ -11,14 +10,10 @@ function App() {
   return (
     <main>
       <div id='builder-sidebar'>
-        <h1>CV Builder</h1>
-        <hr />
-        <Personal info={info} setInfo={setInfo} />
-
-        <Education info={info} setInfo={setInfo} />
+        <Builder info={info} setInfo={setInfo} />
       </div>
-      <div id='display-panel'>
-        <Display info={info} />
+      <div id='preview-panel'>
+        <Preview info={info} setInfo={setInfo} />
       </div>
     </main>
   );

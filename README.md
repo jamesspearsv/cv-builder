@@ -7,11 +7,16 @@ This project is part of [The Odin Project](https://www.theodinproject.com/lesson
 ## Roadmap
 
 - [x] Design and structure app state
-- [ ] Implement cv sections to collect user input
+- [x] Implement cv sections to collect user input
   - [x] Personal deails
-  - [ ] Education
-  - [ ] Work experience
-- [ ] Implement cv preview. Should by synced with app state and change based on user interaction
-- [ ] Style compoents and app
-- [ ] Add ability to edit and remove work experiences/education
-- [ ] Add ability to print and downlowd created cv/resume
+  - [x] Education
+  - [x] Work experience
+- [x] Implement cv preview. Should by synced with app state and change based on user interaction
+- [ ] Add builder panel accordian element
+- [ ] Style cv preview panel and contents
+- [ ] Add error catching and validaiton to builder components
+- [ ] Add drag/drop cv reordering ability.
+- [ ] Add cv style customization options
+  - [ ] Font style
+  - [ ] Accent colors
+- [ ] Add ability to print and download created cv/resume

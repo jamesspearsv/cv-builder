@@ -1,6 +1,19 @@
 main {
-  width: 100%;
+  width: 100dvw;
+  height: 100dvh;
   display: flex;
+}
+
+#builder-sidebar {
+  overflow-y: scroll;
+  max-height: 100%;
+  width: 25%;
+}
+
+#preview-panel {
+  overflow-y: scroll;
+  max-height: 100%;
+  margin: auto;
 }
 
 .form {
@@ -14,6 +27,10 @@ main {
   display: flex;
   flex-direction: column-reverse;
   gap: 0.2rem;
+}
+
+h2:has(+ form) {
+  margin: 1rem 0;
 }
 
 .form-group-horizontal {

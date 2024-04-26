@@ -5,7 +5,7 @@
   --font-large: 1.4rem;
 }
 
-html {
+body {
   font-family: system-ui;
   font-size: 16px;
   margin: 0;
@@ -16,6 +16,8 @@ html {
   color: var(--font-color);
 }
 
-#root {
-  margin: 1rem;
+h1,
+h2,
+h3 {
+  margin: 0;
 }

@@ -1,0 +1,13 @@
+#preview {
+  --preview-size: 700px;
+  width: var(--preview-size);
+  height: calc(var(--preview-size) * 1.294);
+  background-color: #ffffff;
+  color: #000000;
+  padding: 4rem;
+  margin: 1rem;
+}
+
+.draggable:hover {
+  cursor: pointer;
+}
