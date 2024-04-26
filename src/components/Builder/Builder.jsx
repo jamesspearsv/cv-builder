@@ -1,17 +1,42 @@
 import './Builder.css';
 
-import { EducationBuilder } from '../Education/EducationBuilder';
+import { EducationBuilder } from '../EducationBuilder/EducationBuilder';
 import { PersonalBuilder } from '../PersonalBuilder/PersonalBuilder';
 import { Workbuilder } from '../WorkBuilder/WorkBuilder';
+import { useState } from 'react';
 
 export function Builder({ info, setInfo }) {
+  const [active, setActive] = useState('');
+
+  function handleHeaderClick(e) {
+    const newActive = e.target.parentElement.parentElement.id;
+
+    if (newActive === active) setActive('');
+    else setActive(newActive);
+  }
+
   return (
     <div id='builder'>
       <h1>CV Builder</h1>
       <hr />
-      <PersonalBuilder info={info} setInfo={setInfo} />
-      <EducationBuilder info={info} setInfo={setInfo} />
-      <Workbuilder info={info} setInfo={setInfo} />
+      <PersonalBuilder
+        info={info}
+        setInfo={setInfo}
+        active={active}
+        handleHeaderClick={handleHeaderClick}
+      />
+      <EducationBuilder
+        info={info}
+        setInfo={setInfo}
+        active={active}
+        handleHeaderClick={handleHeaderClick}
+      />
+      <Workbuilder
+        info={info}
+        setInfo={setInfo}
+        active={active}
+        handleHeaderClick={handleHeaderClick}
+      />
       <hr />
       <div id='link-back'>
         Find the code on

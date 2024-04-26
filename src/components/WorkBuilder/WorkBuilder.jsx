@@ -1,6 +1,7 @@
 import { v4 as uuid } from 'uuid';
+import Chevron from '../../assets/chevron.svg';
 
-export function Workbuilder({ info, setInfo }) {
+export function Workbuilder({ info, setInfo, active, handleHeaderClick }) {
   function handleSubmit(e) {
     e.preventDefault();
     const elements = e.target.elements;
@@ -19,8 +20,14 @@ export function Workbuilder({ info, setInfo }) {
   }
 
   return (
-    <div id='work-builder'>
-      <h2>Professional Experience</h2>
+    <div
+      id='work-builder'
+      className={active !== 'work-builder' ? 'inactive' : ''}
+    >
+      <div className='builder-section-header'>
+        <h2>Professional Experience</h2>
+        <img src={Chevron} onClick={handleHeaderClick} />
+      </div>
       <form className='form' onSubmit={handleSubmit}>
         <div className='form-group'>
           <label htmlFor='comapany'>Company</label>

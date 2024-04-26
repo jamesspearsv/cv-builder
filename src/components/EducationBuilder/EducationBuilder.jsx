@@ -1,6 +1,7 @@
 import { v4 as uuid } from 'uuid';
+import Chevron from '../../assets/chevron.svg';
 
-export function EducationBuilder({ info, setInfo }) {
+export function EducationBuilder({ info, setInfo, active, handleHeaderClick }) {
   function handleSubmit(e) {
     e.preventDefault();
     const elements = e.target.elements;
@@ -21,8 +22,14 @@ export function EducationBuilder({ info, setInfo }) {
   }
 
   return (
-    <div id='education-builder'>
-      <h2>Education</h2>
+    <div
+      id='education-builder'
+      className={active !== 'education-builder' ? 'inactive' : ''}
+    >
+      <div className='builder-section-header'>
+        <h2>Education</h2>
+        <img src={Chevron} onClick={handleHeaderClick} />
+      </div>
       <form className='form' onSubmit={handleSubmit}>
         <div className='form-group'>
           <label htmlFor='school'>School</label>

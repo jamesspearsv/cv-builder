@@ -7,7 +7,7 @@ main {
 #builder-sidebar {
   overflow-y: scroll;
   max-height: 100%;
-  width: 25%;
+  min-width: 350px;
 }
 
 #preview-panel {

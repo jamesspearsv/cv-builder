@@ -1,4 +1,6 @@
-export function PersonalBuilder({ info, setInfo }) {
+import Chevron from '../../assets/chevron.svg';
+
+export function PersonalBuilder({ info, setInfo, active, handleHeaderClick }) {
   function handleChange(e) {
     const key = e.target.name;
     const updatedPersonal = { ...info.personal };
@@ -8,25 +10,14 @@ export function PersonalBuilder({ info, setInfo }) {
   }
 
   return (
-    <div id='personal-builder'>
-      <h2>
-        Personal Details
-        <span className='chevron'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='16'
-            height='16'
-            fill='currentColor'
-            class='bi bi-chevron-up'
-            viewBox='0 0 16 16'
-          >
-            <path
-              fill-rule='evenodd'
-              d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z'
-            />
-          </svg>
-        </span>
-      </h2>
+    <div
+      id='personal-builder'
+      className={active !== 'personal-builder' ? 'inactive' : ''}
+    >
+      <div className='builder-section-header'>
+        <h2>Personal Details</h2>
+        <img src={Chevron} onClick={handleHeaderClick} />
+      </div>
       <form className='form'>
         <div className='form-group'>
           <label htmlFor='name'>Name</label>

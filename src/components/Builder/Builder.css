@@ -10,3 +10,17 @@
   color: white;
   margin-left: 5px;
 }
+
+.inactive > form {
+  display: none;
+}
+
+.inactive img {
+  transform: rotate(180deg);
+}
+
+.builder-section-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}

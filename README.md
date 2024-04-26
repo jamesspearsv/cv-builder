@@ -12,10 +12,10 @@ This project is part of [The Odin Project](https://www.theodinproject.com/lesson
   - [x] Education
   - [x] Work experience
 - [x] Implement cv preview. Should by synced with app state and change based on user interaction
-- [ ] Add builder panel accordian element
+- [x] Add ability to collapse builder panel sections
 - [ ] Style cv preview panel and contents
 - [ ] Add error catching and validaiton to builder components
-- [ ] Add drag/drop cv reordering ability.
+- [ ] Add drag/drop cv reordering ability
 - [ ] Add cv style customization options
   - [ ] Font style
   - [ ] Accent colors
