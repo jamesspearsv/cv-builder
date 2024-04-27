@@ -1,8 +1,8 @@
 export const data = {
   personal: {
-    name: 'James Spears',
-    email: 'jamesspearsv@gmail.com',
-    phone: '865-804-0761',
+    name: 'James Spears, V',
+    email: 'demo@demo.com',
+    phone: '123-456-7890',
     website: 'jamesspearsv@gmail.com',
   },
   education: [
