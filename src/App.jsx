@@ -7,6 +7,8 @@ import { Builder } from './components/Builder/Builder';
 function App() {
   const [info, setInfo] = useState(data);
 
+  console.log(info);
+
   return (
     <main>
       <div id='builder-sidebar'>

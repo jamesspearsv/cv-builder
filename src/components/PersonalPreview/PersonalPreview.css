@@ -1,4 +1,11 @@
-.personal-details {
+#personal-preview {
+  width: 100%;
+  background-color: aliceblue;
+  text-align: center;
+}
+
+#personal-details {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
+  justify-content: center;
 }

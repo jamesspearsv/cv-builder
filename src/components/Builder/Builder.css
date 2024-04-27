@@ -1,5 +1,63 @@
 #builder {
+  --transition-time: 400ms;
   padding: 1rem;
+}
+
+div:has(+ .builder-section-header) {
+  height: fit-content;
+}
+
+.builder-section-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.builder-section-header h2 {
+  margin-bottom: 1rem;
+}
+
+.builder-section-header img {
+  transition: transform var(--transition-time) ease-in-out;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  height: 470px;
+  overflow-y: hidden;
+  transition: height var(--transition-time) ease-in-out;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.2rem;
+}
+
+.form-group-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form-group input {
+  padding: 0.3rem;
+}
+
+.form-group > label {
+  font-size: var(--font-small);
+}
+
+.inactive > form.form {
+  height: 0;
+}
+
+.inactive img {
+  transform: rotate(180deg);
 }
 
 #link-back {
@@ -9,18 +67,4 @@
 #link-back > a {
   color: white;
   margin-left: 5px;
-}
-
-.inactive > form {
-  display: none;
-}
-
-.inactive img {
-  transform: rotate(180deg);
-}
-
-.builder-section-header {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
 }

@@ -10,9 +10,13 @@ export function Workbuilder({ info, setInfo, active, handleHeaderClick }) {
       key: uuid(),
       company: elements.company.value,
       positiontitle: elements.positiontitle.value,
+      location: elements.location.value,
       startdate: elements.startdate.value,
       enddate: elements.enddate.value,
+      responsibilities: elements.responsibilities.value,
     };
+
+    console.log(entry.responsibilities);
 
     const updatedWork = info.work.slice();
     updatedWork.push(entry);
@@ -44,6 +48,14 @@ export function Workbuilder({ info, setInfo, active, handleHeaderClick }) {
         <div className='form-group'>
           <label htmlFor='enddate'>Finish Date</label>
           <input type='text' name='enddate' />
+        </div>
+        <div className='form-group'>
+          <label htmlFor='location'>Location</label>
+          <input type='text' name='location' />
+        </div>
+        <div className='form-group'>
+          <label htmlFor='responsibilities'>Responsibilities</label>
+          <textarea name='responsibilities' cols='30' rows='5'></textarea>
         </div>
         <input type='submit' value='Add' />
       </form>
