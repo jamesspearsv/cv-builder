@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 #preview {
   --preview-size: 650px;
   width: var(--preview-size);

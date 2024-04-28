@@ -17,6 +17,11 @@ main {
 }
 
 @media print {
+  @page {
+    margin: 0.75in;
+    size: 8.5in 11in;
+  }
+
   body * {
     margin: 0 !important;
     padding: 0 !important;
@@ -26,16 +31,18 @@ main {
     display: none !important;
   }
 
-  main {
-    width: 8.5in !important;
-    height: 11in !important;
-  }
-
   #preview {
+    padding: 10px !important;
     visibility: visible !important;
     break-inside: avoid;
-    font-size: 12pt;
     width: 100% !important;
-    height: 100% !important;
+    font-size: 13pt;
+  }
+
+  body,
+  #root,
+  main {
+    height: fit-content !important;
+    background-color: white !important;
   }
 }
