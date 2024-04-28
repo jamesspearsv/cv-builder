@@ -4,10 +4,10 @@
   height: calc(var(--preview-size) * 1.2941);
   background-color: #ffffff;
   color: #000000;
-  padding: 4rem;
+  padding: 3.5rem;
   margin: 0.75rem;
   font-size: 16px;
-  font-family: serif;
+  margin: auto;
 }
 
 .preview-h1 {
@@ -17,6 +17,12 @@
 .preview-h2 {
   font-size: 1.2em;
   font-weight: bold;
+}
+
+hr.divider {
+  height: 0;
+  width: 100%;
+  margin: 0.5rem 0;
 }
 
 .entry-group {

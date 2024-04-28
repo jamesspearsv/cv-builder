@@ -6,17 +6,22 @@ import { Builder } from './components/Builder/Builder';
 
 function App() {
   const [info, setInfo] = useState(data);
-
-  console.log(info);
+  const [style, setStyle] = useState({
+    fontFamily: 'serif',
+    color: 'black',
+  });
 
   return (
     <main>
-      <div id='builder-sidebar'>
-        <Builder info={info} setInfo={setInfo} />
+      <div id='builder-sidebar' className='no-print'>
+        <Builder
+          info={info}
+          setInfo={setInfo}
+          style={style}
+          setStyle={setStyle}
+        />
       </div>
-      <div id='preview-panel'>
-        <Preview info={info} setInfo={setInfo} />
-      </div>
+      <Preview info={info} setInfo={setInfo} style={style} />
     </main>
   );
 }

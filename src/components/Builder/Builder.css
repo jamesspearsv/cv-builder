@@ -1,6 +1,12 @@
 #builder {
   --transition-time: 400ms;
   padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 90%;
+  overflow-y: scroll;
 }
 
 div:has(+ .builder-section-header) {
@@ -11,6 +17,7 @@ div:has(+ .builder-section-header) {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  position: sticky;
 }
 
 .builder-section-header h2 {

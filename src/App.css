@@ -17,17 +17,25 @@ main {
 }
 
 @media print {
-  body {
-    margin: 0;
-    padding: 0;
+  body * {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    width: 8.5in !important;
+    height: 11in !important;
+  }
+
+  #preview {
+    visibility: visible !important;
+    break-inside: avoid;
     font-size: 12pt;
-  }
-
-  #builder-sidebar {
-    display: none;
-  }
-
-  #customizer {
-    display: none;
+    width: 100% !important;
+    height: 100% !important;
   }
 }
