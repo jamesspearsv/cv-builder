@@ -1,4 +1,6 @@
 import './Builder.css';
+import { data } from '../../js/data';
+import ArrowClockwise from '../../assets/arrow-clockwise.svg';
 
 import { EducationBuilder } from '../EducationBuilder/EducationBuilder';
 import { PersonalBuilder } from '../PersonalBuilder/PersonalBuilder';
@@ -16,9 +18,20 @@ export function Builder({ info, setInfo, style, setStyle }) {
     else setActive(newActive);
   }
 
+  function handelReset() {
+    const reset = confirm('Are you sure you want to reset?');
+    console.log(reset);
+    if (reset) setInfo(data);
+  }
+
   return (
     <div id='builder'>
-      <h1>CV Builder</h1>
+      <div id='builder-header'>
+        <h1>CV Builder</h1>
+        <button id='reset-button' onClick={handelReset}>
+          <img src={ArrowClockwise} alt='round arrow in clockwise direction' />
+        </button>
+      </div>
       <hr />
       <PersonalBuilder
         info={info}

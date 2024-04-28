@@ -9,6 +9,29 @@
   overflow-y: scroll;
 }
 
+#builder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#reset-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1rem;
+  width: 1rem;
+  padding: 0.75rem;
+}
+
+#reset-button img {
+  transition: transform 300ms;
+}
+
+#reset-button img:hover {
+  transform: rotate(360deg);
+}
+
 div:has(+ .builder-section-header) {
   height: fit-content;
 }
