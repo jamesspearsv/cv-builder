@@ -11,19 +11,20 @@ This project is part of [The Odin Project](https://www.theodinproject.com/lesson
   - [x] Personal deails
   - [x] Education
   - [x] Work experience
-- [x] Implement cv preview. Should by synced with app state and change based on user interaction
+- [x] Implement cv preview and sync with app state
 - [x] Add ability to collapse builder panel sections
-- [ ] Style cv preview panel and contents
+- [x] Style cv preview panel and contents
   - [x] Personal details
   - [x] Work experience
-  - [ ] Education
-- [ ] Add ability to print and download created cv/resume
+  - [x] Education
+- [x] Add ability to print and download created cv/resume
   - [https://www.html-easy.com/learn/how-to-print-in-html/]
+- [x] Add reset button for cv builder
 - [ ] Add error catching and validaiton to builder components
 - [ ] Add drag/drop cv reordering ability
-- [ ] Add cv style customization options
-  - [ ] Font style
-  - [ ] Accent colors
-- [ ] Add format parsing and display for work responsibilities
-  - [ ] Split inputed date on \n and record in a responsiblities array
+- [x] Add cv style customization options
+  - [x] Font style
+  - [x] Accent colors
+- [ ] Add format parsing and display for work responsibilities and education recognitions
+  - [ ] Split inputed date on '\n' and record in an array
   - [ ] Display at an unordered list
