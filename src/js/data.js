@@ -3,15 +3,16 @@ export const data = {
     name: 'James Spears, V',
     email: 'demo@demo.com',
     phone: '123-456-7890',
-    website: 'jamesspearsv@gmail.com',
+    website: 'jamesspearsv.com',
   },
   education: [
     {
       key: '1',
       school: 'Univ. of Tennessee',
-      major: 'History',
+      major: 'Bachelor of Arts in History',
       startdate: 'August 2018',
       enddate: 'May 2020',
+      recognitions: 'Suma Cum Laude\nHonors',
     },
   ],
   work: [

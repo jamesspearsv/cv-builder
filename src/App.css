@@ -15,3 +15,19 @@ main {
   max-height: 100%;
   margin: auto;
 }
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+  }
+
+  #builder-sidebar {
+    display: none;
+  }
+
+  #customizer {
+    display: none;
+  }
+}

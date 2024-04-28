@@ -11,6 +11,7 @@ export function EducationBuilder({ info, setInfo, active, handleHeaderClick }) {
       major: elements.major.value,
       startdate: elements.startdate.value,
       enddate: elements.enddate.value,
+      recognitions: elements.recognitions.value,
     };
 
     console.log(entry.key);
@@ -36,7 +37,7 @@ export function EducationBuilder({ info, setInfo, active, handleHeaderClick }) {
           <input type='text' name='school' />
         </div>
         <div className='form-group'>
-          <label htmlFor='major'>Major</label>
+          <label htmlFor='major'>Degree Type</label>
           <input type='text' name='major' />
         </div>
         <div className='form-group'>
@@ -46,6 +47,10 @@ export function EducationBuilder({ info, setInfo, active, handleHeaderClick }) {
         <div className='form-group'>
           <label htmlFor='enddate'>Finish Date</label>
           <input type='text' name='enddate' />
+        </div>
+        <div className='form-group'>
+          <label htmlFor='recognitions'>Recogniations & Achievements</label>
+          <textarea name='recognitions' id='' cols='30' rows='5'></textarea>
         </div>
         <input type='submit' value='Add' />
       </form>

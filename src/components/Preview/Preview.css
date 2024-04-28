@@ -1,12 +1,12 @@
 #preview {
-  --preview-size: 700px;
+  --preview-size: 650px;
   width: var(--preview-size);
-  height: calc(var(--preview-size) * 1.294);
+  height: calc(var(--preview-size) * 1.2941);
   background-color: #ffffff;
   color: #000000;
   padding: 4rem;
-  margin: 1rem;
-  font-size: 12pt;
+  margin: 0.75rem;
+  font-size: 16px;
   font-family: serif;
 }
 
@@ -17,6 +17,14 @@
 .preview-h2 {
   font-size: 1.2em;
   font-weight: bold;
+}
+
+.entry-group {
+  display: flex;
+}
+
+.wrap {
+  white-space: pre-wrap;
 }
 
 .draggable:hover {

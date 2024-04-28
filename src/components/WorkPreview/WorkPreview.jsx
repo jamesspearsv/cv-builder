@@ -3,10 +3,8 @@ import './WorkPreview.css';
 export function WorkPreview({ work }) {
   if (!work) return;
 
-  const classes = 'work-entry';
-
   return work.map((entry) => (
-    <div key={entry.key} className={classes}>
+    <div key={entry.key} className='work-entry'>
       <div
         className='entry-group'
         style={{ alignItems: 'end', justifyContent: 'space-between' }}
@@ -20,9 +18,7 @@ export function WorkPreview({ work }) {
         <div className='work-entry-company'>{entry.company}</div>
         <div>{entry.location}</div>
       </div>
-      <div className='work-entry-responsibilities'>
-        {entry.responsibilities}
-      </div>
+      <div className='wrap'>{entry.responsibilities}</div>
     </div>
   ));
 }

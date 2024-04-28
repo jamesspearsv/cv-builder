@@ -1,7 +1,3 @@
-.entry-group {
-  display: flex;
-}
-
 .work-entry-company,
 .work-entry-company + div {
   font-style: italic;
@@ -10,8 +6,4 @@
 .work-entry-company::after {
   content: ',';
   margin-right: 5px;
-}
-
-.work-entry-responsibilities {
-  white-space: pre-wrap;
 }
