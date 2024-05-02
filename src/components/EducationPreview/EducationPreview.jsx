@@ -1,10 +1,18 @@
 import './EducationPreview.css';
 
-export function EducationPreview({ education }) {
+export function EducationPreview({ education, handleEditing }) {
   if (!education) return;
 
-  return education.map((entry) => (
-    <div key={entry.key} className='education-entry'>
+  return education.map((entry, index) => (
+    <div
+      key={entry.key}
+      className='education-entry'
+      data-section='work'
+      data-index={index}
+      onClick={() => {
+        handleEditing('education', index);
+      }}
+    >
       <div
         className='entry-group'
         style={{ alignItems: 'end', justifyContent: 'space-between' }}

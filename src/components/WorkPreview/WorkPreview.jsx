@@ -1,10 +1,18 @@
 import './WorkPreview.css';
 
-export function WorkPreview({ work }) {
+export function WorkPreview({ work, handleEditing }) {
   if (!work) return;
 
-  return work.map((entry) => (
-    <div key={entry.key} className='work-entry'>
+  return work.map((entry, index) => (
+    <div
+      key={entry.key}
+      className='work-entry'
+      data-section='work'
+      data-index={index}
+      onClick={() => {
+        handleEditing('work', index);
+      }}
+    >
       <div
         className='entry-group'
         style={{ alignItems: 'end', justifyContent: 'space-between' }}

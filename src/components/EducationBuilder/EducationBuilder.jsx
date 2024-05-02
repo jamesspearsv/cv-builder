@@ -1,25 +1,36 @@
 import { v4 as uuid } from 'uuid';
 import Chevron from '../../assets/chevron.svg';
+import { data } from '../../js/data';
 
 export function EducationBuilder({ info, setInfo, active, handleHeaderClick }) {
+  function handleChange(e) {
+    const key = e.target.name;
+    const educationEntry = { ...info.educationEntry };
+    educationEntry[key] = e.target.value;
+
+    setInfo({ ...info, educationEntry });
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
-    const elements = e.target.elements;
-    const entry = {
-      key: uuid(),
-      school: elements.school.value,
-      major: elements.major.value,
-      startdate: elements.startdate.value,
-      enddate: elements.enddate.value,
-      recognitions: elements.recognitions.value,
-    };
 
-    console.log(entry.key);
+    const entry = info.educationEntry;
+    entry.key = uuid();
 
     const updatedEducation = info.education.slice();
-    updatedEducation.push(entry);
+    if (info.edit.isEditing && info.edit.section === 'education') {
+      updatedEducation[info.edit.index] = entry;
+    } else {
+      updatedEducation.push(entry);
+    }
 
-    setInfo({ ...info, education: updatedEducation });
+    setInfo({
+      ...info,
+      education: updatedEducation,
+      educationEntry: data.educationEntry,
+      edit: data.edit,
+      workEntry: data.workEntry,
+    });
   }
 
   return (
@@ -34,23 +45,50 @@ export function EducationBuilder({ info, setInfo, active, handleHeaderClick }) {
       <form className='form' onSubmit={handleSubmit}>
         <div className='form-group'>
           <label htmlFor='school'>School</label>
-          <input type='text' name='school' />
+          <input
+            type='text'
+            name='school'
+            value={info.educationEntry.school}
+            onChange={handleChange}
+          />
         </div>
         <div className='form-group'>
           <label htmlFor='major'>Degree Type</label>
-          <input type='text' name='major' />
+          <input
+            type='text'
+            name='major'
+            value={info.educationEntry.major}
+            onChange={handleChange}
+          />
         </div>
         <div className='form-group'>
           <label htmlFor='startdate'>Start Date</label>
-          <input type='text' name='startdate' />
+          <input
+            type='text'
+            name='startdate'
+            value={info.educationEntry.startdate}
+            onChange={handleChange}
+          />
         </div>
         <div className='form-group'>
           <label htmlFor='enddate'>Finish Date</label>
-          <input type='text' name='enddate' />
+          <input
+            type='text'
+            name='enddate'
+            value={info.educationEntry.enddate}
+            onChange={handleChange}
+          />
         </div>
         <div className='form-group'>
           <label htmlFor='recognitions'>Recogniations & Achievements</label>
-          <textarea name='recognitions' id='' cols='30' rows='5'></textarea>
+          <textarea
+            name='recognitions'
+            id=''
+            cols='30'
+            rows='5'
+            value={info.educationEntry.recognitions}
+            onChange={handleChange}
+          ></textarea>
         </div>
         <input type='submit' value='Add' />
       </form>

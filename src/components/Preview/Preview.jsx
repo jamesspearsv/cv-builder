@@ -1,10 +1,35 @@
 import './Preview.css';
+import { data } from '../../js/data';
 
 import { EducationPreview } from '../EducationPreview/EducationPreview';
 import { PersonalPreview } from '../PersonalPreview/PersonalPreview';
 import { WorkPreview } from '../WorkPreview/WorkPreview';
 
-export function Preview({ info, style }) {
+export function Preview({ info, setInfo, style }) {
+  function handleEditing(section, index) {
+    const edit = {
+      isEditing: true,
+      section,
+      index,
+    };
+
+    if (section === 'work') {
+      setInfo({
+        ...info,
+        edit,
+        workEntry: info.work[index],
+        educationEntry: data.educationEntry,
+      });
+    } else {
+      setInfo({
+        ...info,
+        edit,
+        educationEntry: info.education[index],
+        workEntry: data.workEntry,
+      });
+    }
+  }
+
   return (
     <>
       <div
@@ -18,10 +43,13 @@ export function Preview({ info, style }) {
           style={{ border: `solid 1px ${style.color}` }}
         />
         <div className='preview-h1'>Education</div>
-        <EducationPreview education={info.education} />
+        <EducationPreview
+          education={info.education}
+          handleEditing={handleEditing}
+        />
         <br />
         <div className='preview-h1'>Professional Experience</div>
-        <WorkPreview work={info.work} />
+        <WorkPreview work={info.work} handleEditing={handleEditing} />
       </div>
     </>
   );

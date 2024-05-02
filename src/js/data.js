@@ -1,4 +1,9 @@
 export const data = {
+  edit: {
+    isEditing: false,
+    sections: '',
+    index: -1,
+  },
   personal: {
     name: '',
     email: '',
@@ -6,25 +11,42 @@ export const data = {
     website: '',
   },
   education: [
-    // {
-    //   key: 'utk',
-    //   school: 'Univ. of Tennessee',
-    //   major: 'Bachelor of Arts in History',
-    //   startdate: 'August 2018',
-    //   enddate: 'May 2020',
-    //   recognitions: 'Suma Cum Laude\nHonors',
-    // },
+    {
+      key: 'utk',
+      school: 'Univ. of Tennessee',
+      major: 'Bachelor of Arts in History',
+      startdate: 'August 2018',
+      enddate: 'May 2020',
+      recognitions: 'Suma Cum Laude\nHonors',
+    },
   ],
   work: [
-    // {
-    //   key: 'mpls',
-    //   company: 'Public Library System',
-    //   positiontitle: 'Assistant Director',
-    //   startdate: 'September 2022',
-    //   enddate: 'Present',
-    //   location: 'Somewhere, USA',
-    //   responsibilities:
-    //     'Managed the public library\nParticipated in system-wide strategic planning',
-    // },
+    {
+      key: 'mpls',
+      company: 'Public Library System',
+      positiontitle: 'Assistant Director',
+      startdate: 'September 2022',
+      enddate: 'Present',
+      location: 'Somewhere, USA',
+      responsibilities:
+        'Managed the public library\nParticipated in system-wide strategic planning',
+    },
   ],
+  educationEntry: {
+    key: '',
+    school: '',
+    major: '',
+    startdate: '',
+    enddate: '',
+    recognitions: '',
+  },
+  workEntry: {
+    key: '',
+    company: '',
+    positiontitle: '',
+    startdate: '',
+    enddate: '',
+    location: '',
+    responsibilities: '',
+  },
 };
