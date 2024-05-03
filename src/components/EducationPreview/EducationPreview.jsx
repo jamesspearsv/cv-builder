@@ -8,7 +8,7 @@ export function EducationPreview({ info, handleEditing, move }) {
     <div
       key={entry.key}
       className='education-entry draggable movable'
-      data-section='work'
+      data-section='education'
       data-index={index}
       draggable='true'
       onDragStart={move.handleDragStart}
