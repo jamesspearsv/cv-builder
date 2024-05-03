@@ -1,10 +1,10 @@
 import { ActionPanel } from '../ActionPanel/ActionPanel';
 import './EducationPreview.css';
 
-export function EducationPreview({ education, handleEditing }) {
-  if (!education) return;
+export function EducationPreview({ info, setInfo, handleEditing }) {
+  if (!info.education) return;
 
-  return education.map((entry, index) => (
+  return info.education.map((entry, index) => (
     <div
       key={entry.key}
       className='education-entry'

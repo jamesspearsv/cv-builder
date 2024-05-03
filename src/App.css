@@ -4,6 +4,14 @@ main {
   display: flex;
 }
 
+[draggable] * {
+  pointer-events: none;
+}
+
+[draggable] .action-panel > button {
+  pointer-events: auto;
+}
+
 #builder-sidebar {
   overflow-y: scroll;
   max-height: 100%;

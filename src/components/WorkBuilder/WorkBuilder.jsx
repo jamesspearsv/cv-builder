@@ -17,7 +17,7 @@ export function Workbuilder({ info, setInfo, active, handleHeaderClick }) {
     const entry = info.workEntry;
     entry.key = uuid();
 
-    const updatedWork = info.work.slice();
+    const updatedWork = [...info.work];
 
     const updatedEducation = info.education.slice();
     if (info.edit.isEditing && info.edit.section === 'work') {

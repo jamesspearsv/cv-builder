@@ -46,12 +46,17 @@ export function Preview({ info, setInfo, style }) {
         />
         <div className='preview-h1'>Education</div>
         <EducationPreview
-          education={info.education}
+          info={info}
+          setInfo={setInfo}
           handleEditing={handleEditing}
         />
         <br />
         <div className='preview-h1'>Professional Experience</div>
-        <WorkPreview work={info.work} handleEditing={handleEditing} />
+        <WorkPreview
+          info={info}
+          setInfo={setInfo}
+          handleEditing={handleEditing}
+        />
       </div>
     </>
   );

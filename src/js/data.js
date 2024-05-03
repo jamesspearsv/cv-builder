@@ -23,7 +23,27 @@ export const data = {
   work: [
     {
       key: 'mpls',
-      company: 'Public Library System',
+      company: 'Job Entry 0',
+      positiontitle: 'Assistant Director',
+      startdate: 'September 2022',
+      enddate: 'Present',
+      location: 'Somewhere, USA',
+      responsibilities:
+        'Managed the public library\nParticipated in system-wide strategic planning',
+    },
+    {
+      key: 'mpl',
+      company: 'Job Entry 1',
+      positiontitle: 'Assistant Director',
+      startdate: 'September 2022',
+      enddate: 'Present',
+      location: 'Somewhere, USA',
+      responsibilities:
+        'Managed the public library\nParticipated in system-wide strategic planning',
+    },
+    {
+      key: '3',
+      company: 'Job Entry 2',
       positiontitle: 'Assistant Director',
       startdate: 'September 2022',
       enddate: 'Present',

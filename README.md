@@ -28,5 +28,6 @@ This project is part of [The Odin Project](https://www.theodinproject.com/lesson
   - [ ] Display at an unordered list
 - [x] Add ability to edit work and education entries
 - [ ] Add ability to remove entries
-- [ ] Add drag/drop cv reordering ability
+- [x] Add drag/drop cv reordering ability
+  - [ ] Add styling for various drag events
 - [ ] Add error catching and validaiton to builder components
