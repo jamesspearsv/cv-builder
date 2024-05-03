@@ -8,7 +8,7 @@ main {
   pointer-events: none;
 }
 
-[draggable] .action-panel > button {
+[draggable] .action-panel .action-item * {
   pointer-events: auto;
 }
 

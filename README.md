@@ -29,5 +29,6 @@ This project is part of [The Odin Project](https://www.theodinproject.com/lesson
 - [x] Add ability to edit work and education entries
 - [ ] Add ability to remove entries
 - [x] Add drag/drop cv reordering ability
-  - [ ] Add styling for various drag events
+  - [x] Add styling for various drag events
 - [ ] Add error catching and validaiton to builder components
+- [ ] Add misc styling rules for inputs, buttons, etc.

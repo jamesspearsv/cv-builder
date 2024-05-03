@@ -3,7 +3,7 @@
 #preview {
   --preview-size: 650px;
   width: var(--preview-size);
-  height: calc(var(--preview-size) * 1.2941);
+  min-height: calc(var(--preview-size) * 1.2941);
   background-color: #ffffff;
   color: #000000;
   padding: 3.5rem;
@@ -36,9 +36,8 @@ hr.divider {
   white-space: pre-wrap;
 }
 
-.draggable:hover {
+.action-item svg:hover {
   cursor: move;
-  background-color: #e9e9e9;
 }
 
 .over {

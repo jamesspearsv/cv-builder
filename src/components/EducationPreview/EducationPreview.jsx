@@ -1,15 +1,21 @@
 import { ActionPanel } from '../ActionPanel/ActionPanel';
 import './EducationPreview.css';
 
-export function EducationPreview({ info, setInfo, handleEditing }) {
+export function EducationPreview({ info, handleEditing, move }) {
   if (!info.education) return;
 
   return info.education.map((entry, index) => (
     <div
       key={entry.key}
-      className='education-entry'
+      className='education-entry draggable movable'
       data-section='work'
       data-index={index}
+      draggable='true'
+      onDragStart={move.handleDragStart}
+      onDragOver={move.handelDragOver}
+      onDragEnter={move.handleDragEnter}
+      onDragLeave={move.handleDragLeave}
+      onDrop={move.handleDrop}
     >
       <div
         className='entry-group'
