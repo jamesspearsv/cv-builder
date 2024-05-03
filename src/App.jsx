@@ -13,15 +13,15 @@ function App() {
 
   return (
     <main>
-      <div id='builder-sidebar' className='no-print'>
-        <Builder
-          info={info}
-          setInfo={setInfo}
-          style={style}
-          setStyle={setStyle}
-        />
+      <Builder
+        info={info}
+        setInfo={setInfo}
+        style={style}
+        setStyle={setStyle}
+      />
+      <div id='preview-container'>
+        <Preview info={info} setInfo={setInfo} style={style} />
       </div>
-      <Preview info={info} setInfo={setInfo} style={style} />
     </main>
   );
 }

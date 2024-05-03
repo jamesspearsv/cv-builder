@@ -1,12 +1,10 @@
 #builder {
   --transition-time: 400ms;
   padding: 1rem;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 25%;
-  height: 90vh;
-  overflow-y: scroll;
+  overflow-y: auto;
+  background-color: var(--color-background);
+  margin-right: auto;
 }
 
 #builder-header {
