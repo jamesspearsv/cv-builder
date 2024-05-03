@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 25%;
-  height: 90%;
+  height: 100dvh;
   overflow-y: scroll;
 }
 
@@ -22,6 +22,9 @@
   height: 1rem;
   width: 1rem;
   padding: 0.75rem;
+  background-color: #e9e9ed;
+  border: solid white 1px;
+  border-radius: 5px;
 }
 
 #reset-button img {
@@ -56,7 +59,7 @@ div:has(+ .builder-section-header) {
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
-  height: 470px;
+  height: 500px;
   overflow-y: hidden;
   transition: height var(--transition-time) ease-in-out;
 }
@@ -74,8 +77,12 @@ div:has(+ .builder-section-header) {
   gap: 1rem;
 }
 
-.form-group input {
-  padding: 0.3rem;
+.form-group input,
+.form-group textarea {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #f3f3f6;
 }
 
 .form-group > label {

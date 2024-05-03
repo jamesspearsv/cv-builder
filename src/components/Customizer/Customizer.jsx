@@ -14,7 +14,7 @@ export function Customizer({ style, setStyle }) {
     <>
       <h2 className='no-print'>Customize</h2>
       <div id='customizer' className='no-print'>
-        <select id='fontFamily' onChange={handelChange}>
+        <select id='fontFamily' onChange={handelChange} className='button'>
           <option disabled selected>
             Font Style
           </option>
@@ -22,7 +22,7 @@ export function Customizer({ style, setStyle }) {
           <option value='sans-serif'>Sans-Serif</option>
           <option value='Cookie'>Cursive</option>
         </select>
-        <select id='color' onChange={handelChange}>
+        <select id='color' onChange={handelChange} className='button'>
           <option disabled selected>
             Color
           </option>
@@ -32,7 +32,9 @@ export function Customizer({ style, setStyle }) {
           <option value='darkgreen'>Dark Green</option>
           <option value='dodgerblue'>Dodger Blue</option>
         </select>
-        <button onClick={window.print}>Export</button>
+        <button className='button button-success' onClick={window.print}>
+          Export
+        </button>
       </div>
     </>
   );

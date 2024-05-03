@@ -1,13 +1,14 @@
 import { ActionPanel } from '../ActionPanel/ActionPanel';
 import './WorkPreview.css';
 
-export function WorkPreview({ info, handleEditing, move }) {
-  if (!info.work) return;
+export function WorkPreview({ info, handleEditing, move, handleDeletion }) {
+  if (info.work.length < 1)
+    return <div>Add some work experience using the builder to the left</div>;
 
   return info.work.map((entry, index) => (
     <div
       key={entry.key}
-      className='work-entry draggable movable'
+      className='work-entry draggable movable entry'
       data-section='work'
       data-index={index}
       draggable='true'
@@ -35,6 +36,7 @@ export function WorkPreview({ info, handleEditing, move }) {
         handleEditing={handleEditing}
         section={'work'}
         index={index}
+        handleDeletion={handleDeletion}
       />
     </div>
   ));

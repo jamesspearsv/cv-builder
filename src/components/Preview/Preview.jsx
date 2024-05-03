@@ -32,6 +32,21 @@ export function Preview({ info, setInfo, style }) {
     }
   }
 
+  function handleDeletion(section, index) {
+    const confirmation = confirm('Are you sure you want to delete this entry?');
+    if (!confirmation) return;
+
+    let array;
+
+    if (section === 'work') array = [...info.work];
+    else array = [...info.education];
+
+    array.splice(index, 1);
+
+    if (section === 'work') setInfo({ ...info, work: array });
+    else setInfo({ ...info, education: array });
+  }
+
   const move = (() => {
     let moveInfo = {
       section: '',
@@ -67,7 +82,10 @@ export function Preview({ info, setInfo, style }) {
 
     function handleDrop(e) {
       e.preventDefault();
-      if (moveInfo.section !== moveInfo.sectionConfirm) return;
+      if (moveInfo.section !== moveInfo.sectionConfirm) {
+        e.target.classList.remove('over');
+        return;
+      }
 
       let array;
       if (moveInfo.section === 'work') {
@@ -113,6 +131,7 @@ export function Preview({ info, setInfo, style }) {
           info={info}
           handleEditing={handleEditing}
           move={move}
+          handleDeletion={handleDeletion}
         />
         <br />
         <div className='preview-h1'>Professional Experience</div>
@@ -121,6 +140,7 @@ export function Preview({ info, setInfo, style }) {
           setInfo={setInfo}
           handleEditing={handleEditing}
           move={move}
+          handleDeletion={handleDeletion}
         />
       </div>
     </>

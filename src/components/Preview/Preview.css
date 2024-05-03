@@ -32,6 +32,11 @@ hr.divider {
   display: flex;
 }
 
+.entry {
+  margin-top: 1rem;
+  transition: margin-top 300ms ease-in-out;
+}
+
 .wrap {
   white-space: pre-wrap;
 }
@@ -41,5 +46,5 @@ hr.divider {
 }
 
 .over {
-  padding-top: 5rem;
+  margin-top: 3rem;
 }

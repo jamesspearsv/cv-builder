@@ -9,7 +9,7 @@ import { useState } from 'react';
 import { Customizer } from '../Customizer/Customizer';
 
 export function Builder({ info, setInfo, style, setStyle }) {
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState('personal-builder');
 
   function handleHeaderClick(e) {
     const newActive = e.target.parentElement.parentElement.id;
@@ -44,12 +44,14 @@ export function Builder({ info, setInfo, style, setStyle }) {
         setInfo={setInfo}
         active={active}
         handleHeaderClick={handleHeaderClick}
+        setActive={setActive}
       />
       <Workbuilder
         info={info}
         setInfo={setInfo}
         active={active}
         handleHeaderClick={handleHeaderClick}
+        setActive={setActive}
       />
       <hr />
       <Customizer style={style} setStyle={setStyle} />

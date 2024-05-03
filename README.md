@@ -27,8 +27,8 @@ This project is part of [The Odin Project](https://www.theodinproject.com/lesson
   - [ ] Split inputed date on '\n' and record in an array
   - [ ] Display at an unordered list
 - [x] Add ability to edit work and education entries
-- [ ] Add ability to remove entries
+- [x] Add ability to remove entries
 - [x] Add drag/drop cv reordering ability
   - [x] Add styling for various drag events
-- [ ] Add error catching and validaiton to builder components
-- [ ] Add misc styling rules for inputs, buttons, etc.
+- [x] Add error catching and validaiton to builder components
+- [x] Add misc styling rules for inputs, buttons, etc.

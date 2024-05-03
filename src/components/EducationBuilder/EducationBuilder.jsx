@@ -53,6 +53,7 @@ export function EducationBuilder({ info, setInfo, active, handleHeaderClick }) {
             name='school'
             value={info.educationEntry.school}
             onChange={handleChange}
+            required
           />
         </div>
         <div className='form-group'>
@@ -62,6 +63,7 @@ export function EducationBuilder({ info, setInfo, active, handleHeaderClick }) {
             name='major'
             value={info.educationEntry.major}
             onChange={handleChange}
+            required
           />
         </div>
         <div className='form-group'>
@@ -71,6 +73,7 @@ export function EducationBuilder({ info, setInfo, active, handleHeaderClick }) {
             name='startdate'
             value={info.educationEntry.startdate}
             onChange={handleChange}
+            required
           />
         </div>
         <div className='form-group'>
@@ -80,6 +83,7 @@ export function EducationBuilder({ info, setInfo, active, handleHeaderClick }) {
             name='enddate'
             value={info.educationEntry.enddate}
             onChange={handleChange}
+            required
           />
         </div>
         <div className='form-group'>

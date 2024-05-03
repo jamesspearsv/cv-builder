@@ -2,7 +2,13 @@ import { v4 as uuid } from 'uuid';
 import Chevron from '../../assets/chevron.svg';
 import { data } from '../../js/data';
 
-export function Workbuilder({ info, setInfo, active, handleHeaderClick }) {
+export function Workbuilder({
+  info,
+  setInfo,
+  active,
+  setActive,
+  handleHeaderClick,
+}) {
   function handleChange(e) {
     const key = e.target.name;
     const workEntry = { ...info.workEntry };
@@ -55,6 +61,7 @@ export function Workbuilder({ info, setInfo, active, handleHeaderClick }) {
             name='company'
             onChange={handleChange}
             value={info.workEntry.company}
+            required
           />
         </div>
         <div className='form-group'>
@@ -64,6 +71,7 @@ export function Workbuilder({ info, setInfo, active, handleHeaderClick }) {
             name='positiontitle'
             onChange={handleChange}
             value={info.workEntry.positiontitle}
+            required
           />
         </div>
         <div className='form-group'>
@@ -73,6 +81,7 @@ export function Workbuilder({ info, setInfo, active, handleHeaderClick }) {
             name='startdate'
             onChange={handleChange}
             value={info.workEntry.startdate}
+            required
           />
         </div>
         <div className='form-group'>
@@ -82,6 +91,7 @@ export function Workbuilder({ info, setInfo, active, handleHeaderClick }) {
             name='enddate'
             onChange={handleChange}
             value={info.workEntry.enddate}
+            required
           />
         </div>
         <div className='form-group'>
@@ -91,6 +101,7 @@ export function Workbuilder({ info, setInfo, active, handleHeaderClick }) {
             name='location'
             onChange={handleChange}
             value={info.workEntry.location}
+            required
           />
         </div>
         <div className='form-group'>

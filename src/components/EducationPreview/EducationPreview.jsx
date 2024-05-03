@@ -1,13 +1,21 @@
 import { ActionPanel } from '../ActionPanel/ActionPanel';
 import './EducationPreview.css';
 
-export function EducationPreview({ info, handleEditing, move }) {
-  if (!info.education) return;
+export function EducationPreview({
+  info,
+  handleEditing,
+  move,
+  handleDeletion,
+}) {
+  if (info.education.length < 1)
+    return (
+      <div>Add some education information using the builder to the left</div>
+    );
 
   return info.education.map((entry, index) => (
     <div
       key={entry.key}
-      className='education-entry draggable movable'
+      className='education-entry draggable movable entry'
       data-section='education'
       data-index={index}
       draggable='true'
@@ -32,6 +40,7 @@ export function EducationPreview({ info, handleEditing, move }) {
         handleEditing={handleEditing}
         section={'education'}
         index={index}
+        handleDeletion={handleDeletion}
       />
     </div>
   ));

@@ -12,6 +12,31 @@ main {
   pointer-events: auto;
 }
 
+.button {
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button-primary {
+  color: white;
+  background-color: #007bff;
+}
+
+.button-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.button-danger {
+  color: white;
+  background-color: #dc3545;
+}
+
 #builder-sidebar {
   overflow-y: scroll;
   max-height: 100%;
@@ -45,6 +70,10 @@ main {
     break-inside: avoid;
     width: 100% !important;
     font-size: 13pt;
+  }
+
+  .entry {
+    margin-top: 1rem;
   }
 
   body,

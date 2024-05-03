@@ -1,6 +1,6 @@
 import './ActionPanel.css';
 
-export function ActionPanel({ handleEditing, section, index }) {
+export function ActionPanel({ handleEditing, handleDeletion, section, index }) {
   return (
     <div className='action-panel no-print'>
       <div className='action-item'>
@@ -17,6 +17,7 @@ export function ActionPanel({ handleEditing, section, index }) {
       </div>
       <div className='action-item'>
         <button
+          className='button button-primary'
           onClick={() => {
             handleEditing(section, index);
           }}
@@ -25,7 +26,14 @@ export function ActionPanel({ handleEditing, section, index }) {
         </button>
       </div>
       <div className='action-item'>
-        <button>Delete</button>
+        <button
+          className='button button-danger'
+          onClick={() => {
+            handleDeletion(section, index);
+          }}
+        >
+          Delete
+        </button>
       </div>
     </div>
   );

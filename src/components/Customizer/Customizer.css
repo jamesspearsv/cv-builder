@@ -8,3 +8,7 @@
   margin: auto;
   padding: 0.5rem;
 }
+
+#customizer select:hover {
+  cursor: pointer;
+}
