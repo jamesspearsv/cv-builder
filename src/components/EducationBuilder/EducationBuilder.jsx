@@ -33,6 +33,9 @@ export function EducationBuilder({ info, setInfo, active, handleHeaderClick }) {
     });
   }
 
+  const submitValue =
+    info.edit.isEditing && info.edit.section === 'education' ? 'Update' : 'Add';
+
   return (
     <div
       id='education-builder'
@@ -90,7 +93,7 @@ export function EducationBuilder({ info, setInfo, active, handleHeaderClick }) {
             onChange={handleChange}
           ></textarea>
         </div>
-        <input type='submit' value='Add' />
+        <input type='submit' value={submitValue} />
       </form>
     </div>
   );

@@ -1,3 +1,4 @@
+import { ActionPanel } from '../ActionPanel/ActionPanel';
 import './EducationPreview.css';
 
 export function EducationPreview({ education, handleEditing }) {
@@ -9,9 +10,6 @@ export function EducationPreview({ education, handleEditing }) {
       className='education-entry'
       data-section='work'
       data-index={index}
-      onClick={() => {
-        handleEditing('education', index);
-      }}
     >
       <div
         className='entry-group'
@@ -24,6 +22,11 @@ export function EducationPreview({ education, handleEditing }) {
       </div>
       <div className='entry-major'>{entry.major}</div>
       <div className='wrap'>{entry.recognitions}</div>
+      <ActionPanel
+        handleEditing={handleEditing}
+        section={'education'}
+        index={index}
+      />
     </div>
   ));
 }

@@ -35,6 +35,9 @@ export function Workbuilder({ info, setInfo, active, handleHeaderClick }) {
     });
   }
 
+  const submitValue =
+    info.edit.isEditing && info.edit.section === 'work' ? 'Update' : 'Add';
+
   return (
     <div
       id='work-builder'
@@ -100,7 +103,7 @@ export function Workbuilder({ info, setInfo, active, handleHeaderClick }) {
             value={info.workEntry.responsibilities}
           ></textarea>
         </div>
-        <input type='submit' value='Add' />
+        <input type='submit' value={submitValue} />
       </form>
     </div>
   );

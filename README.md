@@ -20,11 +20,13 @@ This project is part of [The Odin Project](https://www.theodinproject.com/lesson
 - [x] Add ability to print and download created cv/resume
   - [https://www.html-easy.com/learn/how-to-print-in-html/]
 - [x] Add reset button for cv builder
-- [ ] Add error catching and validaiton to builder components
-- [ ] Add drag/drop cv reordering ability
 - [x] Add cv style customization options
   - [x] Font style
   - [x] Accent colors
 - [ ] Add format parsing and display for work responsibilities and education recognitions
   - [ ] Split inputed date on '\n' and record in an array
   - [ ] Display at an unordered list
+- [x] Add ability to edit work and education entries
+- [ ] Add ability to remove entries
+- [ ] Add drag/drop cv reordering ability
+- [ ] Add error catching and validaiton to builder components

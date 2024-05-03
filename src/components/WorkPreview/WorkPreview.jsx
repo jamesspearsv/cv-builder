@@ -1,3 +1,4 @@
+import { ActionPanel } from '../ActionPanel/ActionPanel';
 import './WorkPreview.css';
 
 export function WorkPreview({ work, handleEditing }) {
@@ -9,9 +10,6 @@ export function WorkPreview({ work, handleEditing }) {
       className='work-entry'
       data-section='work'
       data-index={index}
-      onClick={() => {
-        handleEditing('work', index);
-      }}
     >
       <div
         className='entry-group'
@@ -27,6 +25,11 @@ export function WorkPreview({ work, handleEditing }) {
         <div>{entry.location}</div>
       </div>
       <div className='wrap'>{entry.responsibilities}</div>
+      <ActionPanel
+        handleEditing={handleEditing}
+        section={'work'}
+        index={index}
+      />
     </div>
   ));
 }

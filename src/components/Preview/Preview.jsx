@@ -7,12 +7,14 @@ import { WorkPreview } from '../WorkPreview/WorkPreview';
 
 export function Preview({ info, setInfo, style }) {
   function handleEditing(section, index) {
+    // Enter editing mode
     const edit = {
       isEditing: true,
       section,
       index,
     };
 
+    // Set values for correct builder section
     if (section === 'work') {
       setInfo({
         ...info,
