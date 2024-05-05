@@ -25,13 +25,11 @@ main {
 }
 
 .button {
+  cursor: pointer;
   border: none;
   border-radius: 5px;
   padding: 0.5rem;
-}
-
-.button:hover {
-  cursor: pointer;
+  -webkit-appearance: none;
 }
 
 .button-primary {
@@ -47,6 +45,13 @@ main {
 .button-danger {
   color: white;
   background-color: #dc3545;
+}
+
+.select {
+  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='%23444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  padding-right: 2rem;
 }
 
 #builder-sidebar {
@@ -87,18 +92,15 @@ main {
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    bottom: 0 !important;
     width: 100% !important;
-    font-size: 13pt;
   }
 
-  /* #preview {
-    padding: 10px !important;
-    visibility: visible !important;
-    break-inside: avoid;
-  } */
+  #preview {
+    font-size: 14pt;
+    width: 100% !important;
+  }
 
   .entry {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 }

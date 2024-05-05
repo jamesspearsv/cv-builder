@@ -6,12 +6,12 @@
   width: 70%;
   height: var(--section-height);
   padding: var(--section-padding);
-  overflow-y: scroll;
+  overflow-y: auto;
   overscroll-behavior: contain;
 }
 
 #preview {
-  --preview-size: 500px;
+  --preview-size: 600px;
   width: var(--preview-size);
   min-height: calc(var(--preview-size) * 1.2941);
   background-color: #ffffff;
@@ -43,7 +43,14 @@ hr.divider {
 
 .entry {
   margin-top: 1rem;
-  transition: margin-top 300ms ease-in-out;
+  transition: padding 200ms ease-in-out;
+}
+
+.entry:hover {
+  background-color: #e9e9ed;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
 }
 
 .wrap {
@@ -55,5 +62,6 @@ hr.divider {
 }
 
 .over {
-  margin-top: 3rem;
+  padding-top: 8rem;
+  transition: padding-top 350ms;
 }

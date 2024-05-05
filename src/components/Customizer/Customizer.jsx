@@ -12,15 +12,15 @@ export function Customizer({ style, setStyle }) {
 
   return (
     <div id='customizer' className='no-print'>
-      <select id='fontFamily' onChange={handelChange} className='button'>
+      <select id='fontFamily' onChange={handelChange} className='button select'>
         <option disabled selected>
           Font Style
         </option>
         <option value='serif'>Serif</option>
         <option value='sans-serif'>Sans-Serif</option>
-        <option value='Cookie'>Cursive</option>
+        <option value='cursive'>Cursive</option>
       </select>
-      <select id='color' onChange={handelChange} className='button'>
+      <select id='color' onChange={handelChange} className='button select'>
         <option disabled selected>
           Color
         </option>

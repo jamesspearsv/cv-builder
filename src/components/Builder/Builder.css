@@ -100,9 +100,18 @@ div:has(+ .builder-section-header) {
 
 #link-back {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 #link-back > a {
   color: white;
   margin-left: 5px;
+}
+
+#link-back > button {
+  max-width: 50%;
 }

@@ -1,5 +1,6 @@
 import './Builder.css';
 import { data } from '../../js/data';
+import { testData } from '../../js/testData';
 import ArrowClockwise from '../../assets/arrow-clockwise.svg';
 
 import { EducationBuilder } from '../EducationBuilder/EducationBuilder';
@@ -22,6 +23,10 @@ export function Builder({ info, setInfo, style, setStyle }) {
     const reset = confirm('Are you sure you want to reset?');
     console.log(reset);
     if (reset) setInfo(data);
+  }
+
+  function loadTestData() {
+    setInfo(testData);
   }
 
   return (
@@ -58,6 +63,9 @@ export function Builder({ info, setInfo, style, setStyle }) {
       <div id='link-back'>
         Find the code on
         <a href='https://github.com/jamesspearsv/cv-builder'>Github</a>
+        <button className='button' onClick={loadTestData}>
+          Load Test Data
+        </button>
       </div>
     </div>
   );
