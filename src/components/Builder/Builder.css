@@ -38,7 +38,6 @@ div:has(+ .builder-section-header) {
 }
 
 .builder-section-header {
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -50,6 +49,10 @@ div:has(+ .builder-section-header) {
 
 .builder-section-header img {
   transition: transform var(--transition-time) ease-in-out;
+}
+
+.builder-section-header img:hover {
+  cursor: pointer;
 }
 
 .form {

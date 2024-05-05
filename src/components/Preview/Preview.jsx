@@ -115,7 +115,7 @@ export function Preview({ info, setInfo, style }) {
   })();
 
   return (
-    <>
+    <div id='preview-container'>
       <div
         id='preview'
         className='preview'
@@ -143,6 +143,6 @@ export function Preview({ info, setInfo, style }) {
           handleDeletion={handleDeletion}
         />
       </div>
-    </>
+    </div>
   );
 }

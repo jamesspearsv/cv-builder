@@ -1,16 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+#preview-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* background-color: aliceblue; */
+  width: 70%;
+  height: var(--section-height);
+  padding: var(--section-padding);
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+}
 
 #preview {
-  --preview-size: 650px;
+  --preview-size: 500px;
   width: var(--preview-size);
   min-height: calc(var(--preview-size) * 1.2941);
   background-color: #ffffff;
   color: #000000;
   padding: 3.5rem;
-  margin: 1rem;
-  font-size: 16px;
+  margin: 0.75rem;
+  font-size: 14px;
   margin: auto;
-  overscroll-behavior: contain;
 }
 
 .preview-h1 {

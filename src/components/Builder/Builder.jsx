@@ -9,7 +9,7 @@ import { useState } from 'react';
 import { Customizer } from '../Customizer/Customizer';
 
 export function Builder({ info, setInfo, style, setStyle }) {
-  const [active, setActive] = useState('personal-builder');
+  const [active, setActive] = useState('');
 
   function handleHeaderClick(e) {
     const newActive = e.target.parentElement.parentElement.id;
@@ -25,13 +25,14 @@ export function Builder({ info, setInfo, style, setStyle }) {
   }
 
   return (
-    <div id='builder'>
+    <div id='builder' className='no-print'>
       <div id='builder-header'>
         <h1>CV Builder</h1>
         <button id='reset-button' onClick={handelReset}>
           <img src={ArrowClockwise} alt='round arrow in clockwise direction' />
         </button>
       </div>
+      <Customizer style={style} setStyle={setStyle} />
       <hr />
       <PersonalBuilder
         info={info}
@@ -54,7 +55,6 @@ export function Builder({ info, setInfo, style, setStyle }) {
         setActive={setActive}
       />
       <hr />
-      <Customizer style={style} setStyle={setStyle} />
       <div id='link-back'>
         Find the code on
         <a href='https://github.com/jamesspearsv/cv-builder'>Github</a>

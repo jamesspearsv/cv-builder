@@ -3,6 +3,15 @@
   --font-color: #ffffff;
   --font-small: 0.8rem;
   --font-large: 1.4rem;
+  --section-height: 95%;
+  --section-padding: 1.3rem;
+}
+
+#root {
+  height: 100dvh;
+  width: 100dvw;
+  /* background-color: blanchedalmond; */
+  /* padding: 1rem; */
 }
 
 body {

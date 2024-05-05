@@ -63,7 +63,7 @@ main {
 
 @media print {
   @page {
-    margin: 0.75in;
+    margin: 1in;
     size: 8.5in 11in;
   }
 
@@ -76,22 +76,29 @@ main {
     display: none !important;
   }
 
-  #preview {
-    padding: 10px !important;
-    visibility: visible !important;
-    break-inside: avoid;
+  body,
+  #root {
+    height: fit-content !important;
+    background-color: white !important;
+  }
+
+  #preview-container {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
     width: 100% !important;
     font-size: 13pt;
   }
 
+  /* #preview {
+    padding: 10px !important;
+    visibility: visible !important;
+    break-inside: avoid;
+  } */
+
   .entry {
     margin-top: 1rem;
-  }
-
-  body,
-  #root,
-  main {
-    height: fit-content !important;
-    background-color: white !important;
   }
 }

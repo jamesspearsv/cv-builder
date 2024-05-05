@@ -12,17 +12,15 @@ function App() {
   });
 
   return (
-    <main>
+    <>
       <Builder
         info={info}
         setInfo={setInfo}
         style={style}
         setStyle={setStyle}
       />
-      <div id='preview-container'>
-        <Preview info={info} setInfo={setInfo} style={style} />
-      </div>
-    </main>
+      <Preview info={info} setInfo={setInfo} style={style} />
+    </>
   );
 }
 
