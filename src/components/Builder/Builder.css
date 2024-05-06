@@ -107,7 +107,7 @@ div:has(+ .builder-section-header) {
   gap: 10px;
 }
 
-#link-back > a {
+#link-back > p > a {
   color: white;
   margin-left: 5px;
 }

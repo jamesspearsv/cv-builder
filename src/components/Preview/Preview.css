@@ -11,15 +11,17 @@
 }
 
 #preview {
-  --preview-size: 600px;
-  width: var(--preview-size);
-  min-height: calc(var(--preview-size) * 1.2941);
+  --preview-width: 55%;
+  --preview-height: calc(var(--preview-width) * 1.2941);
+  width: var(--preview-width);
   background-color: #ffffff;
   color: #000000;
   padding: 3.5rem;
   margin: 0.75rem;
   font-size: 14px;
   margin: auto;
+  aspect-ratio: 1/1.2941;
+  overflow-y: auto;
 }
 
 .preview-h1 {
@@ -43,18 +45,28 @@ hr.divider {
 
 .entry {
   margin-top: 1rem;
-  transition: padding 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+  padding: 10px;
 }
 
 .entry:hover {
   background-color: #e9e9ed;
-  padding: 10px;
   border: none;
   border-radius: 10px;
 }
 
 .wrap {
   white-space: pre-wrap;
+}
+
+.action-panel {
+  height: 0;
+  overflow: hidden;
+  transition: height 300ms ease-in-out;
+}
+
+.entry:hover .action-panel {
+  height: 50px;
 }
 
 .action-item svg:hover {

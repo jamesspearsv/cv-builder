@@ -61,8 +61,10 @@ export function Builder({ info, setInfo, style, setStyle }) {
       />
       <hr />
       <div id='link-back'>
-        Find the code on
-        <a href='https://github.com/jamesspearsv/cv-builder'>Github</a>
+        <p>
+          Find the code on
+          <a href='https://github.com/jamesspearsv/cv-builder'>Github</a>
+        </p>
         <button className='button' onClick={loadTestData}>
           Load Test Data
         </button>

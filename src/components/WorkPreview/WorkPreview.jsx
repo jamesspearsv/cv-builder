@@ -3,7 +3,7 @@ import './WorkPreview.css';
 
 export function WorkPreview({ info, handleEditing, move, handleDeletion }) {
   if (info.work.length < 1)
-    return <div>Add some work experience using the builder to the left</div>;
+    return <div>Add some work experience using the builder to the left.</div>;
 
   return info.work.map((entry, index) => (
     <div
